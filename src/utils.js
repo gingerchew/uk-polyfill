@@ -1,7 +1,4 @@
-export function mergeAttributes(elA, elB) {
-    for (const { name, value } of elA.attributes) {
-        elB.setAttribute(name, value)
-    }
+export const mergeAttributes = (elA, elB) => (Array.from(elA.attributes, ({ name, value }) => elB.setAttribute(name,value)), elB);
 
-    return elB;
-}
+export const $ = document.querySelectorAll.bind(document);
+export const C = document.createElement;

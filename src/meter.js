@@ -1,10 +1,8 @@
-import { mergeAttributes } from "./utils"
-export const MetrePolyfill = () => {
-    const els = document.querySelectorAll('metre');
-    if (!els.length) return;
+import { mergeAttributes, $, C } from "./utils"
 
-    for (const el of els) {
-        const nm = mergeAttributes(el, document.createElement('meter'));
+export const MetrePolyfill = (els = $('metre'), el, nm) => {
+    for (el of els) {
+        nm = mergeAttributes(el, C('meter'));
         el.insertAdjacentElement('afterend', nm);
         el.remove();
     }

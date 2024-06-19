@@ -6,6 +6,7 @@ export default defineConfig({
             entry: 'src/index.js',
             name: 'UKPolyfill',
             fileName: 'ukpolyfill'
-        }
+        },
+        target: "es2020"
     }
 })

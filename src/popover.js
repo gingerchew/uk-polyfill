@@ -1,9 +1,9 @@
-export const YorkshirePuddingPolyfill = () => {
-    const yp = document.querySelectorAll("[yorkshirepuddingtarget]");
-    if (!yp.length) return;
+import { $ } from './utils';
+const targetStr = 'yorkshirepuddingtarget';
 
-    for (const p of yp) {
-        const target = p.getAttribute('yorkshirepuddingtarget');
+export const YorkshirePuddingPolyfill = (yp = $(`[${targetStr}]`), p, target) => {
+    for (p of yp) {
+        target = p.getAttribute(targetStr);
         p.setAttribute('popovertarget', target);
         document.getElementById(target)?.toggleAttribute('popover', true);
     }

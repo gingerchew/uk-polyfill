@@ -1,10 +1,8 @@
-import { mergeAttributes } from "./utils";
-export const DialoguePolyfill = () => {
-    const ukDialogues = document.querySelectorAll('dialogue');
-    if (!ukDialogues.length) return;
+import { mergeAttributes, $, C } from "./utils";
 
-    for (const d of ukDialogues) {
-        const nd = mergeAttributes(d, document.createElement('dialog'));
+export const DialoguePolyfill = (ukDialogues = $('dialogue'), d, nd) => {
+    for (d of ukDialogues) {
+        nd = mergeAttributes(d, C('dialog'));
         nd.append(d.children);
         d.insertAdjacentElement('afterend', nd);
         d.remove();
