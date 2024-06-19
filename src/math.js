@@ -1,1 +1,1 @@
-export const Maths = Math;
+export const MathsPolyfill = () => globalThis.Maths = globalThis.Math;
