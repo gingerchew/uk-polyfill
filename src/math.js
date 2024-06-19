@@ -1,1 +1,1 @@
-export class Maths extends Math {};
+export const Maths = Math;
