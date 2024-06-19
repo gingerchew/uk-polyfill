@@ -1,0 +1,17 @@
+{
+  "name": "uk-polyfill",
+  "version": "1.0.0",
+  "description": "A polyfill to make the web more compatible with the folks across the pond",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"vite build"
+  },
+  "keywords": [],
+  "author": "ginger",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.3.1"
+  }
+}
