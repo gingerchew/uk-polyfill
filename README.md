@@ -9,3 +9,8 @@ Makes various specs more friendly to folks across the pond.
 
 - Colour/Color
 - Biscuit/Cookie
+
+
+## Have a suggestion?
+
+Make a PR :)
